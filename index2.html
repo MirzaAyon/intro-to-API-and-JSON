@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+    <h2>Hello API</h2>
+
+    <script>
+        //Javascript object Notation
+        //JSON
+        const user = {
+            id: 11,
+            name: 'Gorib AMir',
+            job: 'actor'
+        }
+        const stringified = JSON.stringify(user);
+        console.log(user);
+        console.log(stringified);
+        //shob inspact kore dekhbo
+        // console.log('API');
+
+        const shop = {
+            name: 'Alia Store',
+            address: 'Ranbir ',
+            profit: 1400,
+            products: ['mobile', 'laptop', 'coke'],
+            owner: {
+                name: 'Alia Bhat',
+                profession: 'actor'
+            },
+            isExpensive: false
+        };
+        const shopstringified = JSON.stringify(shop)
+        console.log(shop);
+        console.log(shopstringified);
+        console.log(shopstringified.owner); //hbe na 
+        //inspact e dekhle bujha jabe shob gula element ke double quote e niye gese shudhu numbsers chara
+        //but normal object ke expand korte parbo but etake expand korte parbo na
+        //stringfy korle object ta string based kichu ekta hoye jae
+
+        //stringified ke normal js object e convert korte parbo
+        const converted = JSON.parse(shopstringified);
+        console.log(converted);
+        console.log(converted.owner);
+        //amk normally stringified obosthae dibe shetake parse kore normal object e convert kore nibo
+        //stringified theke owner ke access korte parbo na
+        //but json parse diye owner ke access korte parbo
+    </script>
+</body>
+
+</html>
