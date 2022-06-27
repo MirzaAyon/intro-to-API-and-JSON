@@ -10,6 +10,9 @@
 
 <body>
     <h2>Hello JSON</h2>
+    <ul id="users">
+
+    </ul>
     <button onclick="loadData()">Load Data</button>
     <button onclick="loadUsers()">Load Users</button>
     <button onclick="loadPosts()">Load Posts</button>
@@ -40,8 +43,16 @@
     // loadPosts();
     //eta korle r click kora lagto na emni tei auto load hoye inspact e dekhato
     function displayUsers(json) {
+        const ul = document.getElementById('users')
+        // console.log(data);
         for (const user of json) {
-            console.log(user);
+            // console.log(user);
+            console.log(user.name);
+            const li = document.createElement('li');
+
+            // li.innerText = user.name;
+            li.innerText = 'New user'; //eta korle 10 ta new user dibe
+            ul.appendChild(li);
         }
     } //inspact
 </script>
