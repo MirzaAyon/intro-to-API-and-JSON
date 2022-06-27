@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hello JSON</h2>
+    <button onclick="loadData()">Load Data</button>
+    <button onclick="loadUsers()">Load Users</button>
+    <button onclick="loadPosts()">Load Posts</button>
+</body>
+<script>
+    function loadData() {
+        fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+
+            .then(json => console.log(json))
+
+    }
+    function loadUsers() {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then(response => response.json())
+
+            .then(json => displayUsers(json))
+
+    }
+    //ekta array er vitore onk gula object dichee
+    function loadPosts() {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(response => response.json())
+
+            .then(json => console.log(json))
+
+    }
+    // loadPosts();
+    //eta korle r click kora lagto na emni tei auto load hoye inspact e dekhato
+    function displayUsers(json) {
+        console.log(json);
+    }
+</script>
+
+</html>
