@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Hello JSON</h2>
+</body>
+<script>
+    fetch('https://jsonplaceholder.typicode.com/todos/1') //tule anlam ekta url 
+        //link take chorme e paste korle json object pawa jabe, prottek ta element e double quote dekha jachee egula json object, stringified ekta topic ache
+        //ranna ghor theke niche plate e anlam
+        .then(response => response.json())
+        //plate theke niche khelam
+        // .then(json => console.log(json))
+        // .then(json => console.log('ayon'))
+        // .then(json => console.log(json))
+        // .then(json => console.log(json.userId))
+        .then(json => console.log(json.title))
+        //etao run kore dekhbo
+        //inspact kore dekhbo //ekta object show hbe
+</script>
+
+</html>
